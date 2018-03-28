@@ -1,11 +1,11 @@
 var async = require('async')
 var PasswordValidator = require('./PasswordValidator');
 
-// Read the file and print its contents.
+// read files
 const fs = require('fs'),
   filename = process.argv[2],
-  commonPasswords = process.argv[3];
-  const files = [filename, commonPasswords];
+  commonPasswords = process.argv[3],
+  files = [filename, commonPasswords];
 
 async.map(files, fs.readFile, function(err, files) {
   let commonPasswordsObj = {};
